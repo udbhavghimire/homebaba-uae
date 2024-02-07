@@ -10,11 +10,11 @@ const montserrat = Montserrat({ subsets: ["cyrillic"] });
 
 export const metadata = {
   alternates: {
-    canonical: `https://condomonk.ca/`,
+    canonical: `https://homebaba.ae/`,
   },
-  title: "Pre Construction Condo Developments for Sale in Canada",
+  title: "Off Plan Properties for Sale in UAE",
   description:
-    "Find the latest Pre Construction condo developments for sale in Canada with the Canada's most user-friendly pre construction portal. Search new homes to buy from leading estate marketplace in Canada.",
+    "Find the latest Off Plan Properties for sale in UAE with the UAE's most user-friendly off plan portal. Search new homes to buy from leading estate marketplace in UAE.",
   icons: {
     icon: "/icon.png",
     shortcut: "/shortcut-icon.png",
