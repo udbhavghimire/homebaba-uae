@@ -60,11 +60,11 @@ export async function generateMetadata({ params }, parent) {
     alternates: {
       canonical: `https://dolphy.ca/pre-construction-homes/${params.city}/condos/`,
     },
-    title: data.preconstructions.length + " Preconstruction Condos in " + city,
+    title: data.preconstructions.length + " Off plan Apartments in " + city,
     openGraph: {
       images: retImage(data.preconstructions),
     },
-    description: `${city} upcoming pre construction Condos. Check out ${data.preconstructions.length}+ new construction condos on Dolphy. Floor plans & pricing updated for upcoming new construction condos in ${city}`,
+    description: `${city} upcoming off plan proerties. Check out ${data.preconstructions.length}+ new off plan appartments on Homebaba. Floor plans & pricing updated for upcoming new off plan apartments in ${city}`,
   };
 }
 
@@ -82,14 +82,14 @@ export default async function Home({ params }) {
             <h1 className="main-title text-center text-md-start fs-mine mb-0">
               {`${
                 data.preconstructions.length
-              }+ Active  New Construction Condos in ${CapitalizeFirst(
+              }+ Active  New Off Plan Apartments in ${CapitalizeFirst(
                 params.city
               )} ( Selling Now )`}
             </h1>
             <p className="text-dark text-center text-md-start mb-2">
               {`${
                 data.preconstructions.length
-              } Pre construction Condos in ${CapitalizeFirst(
+              } Off Plan Apartments in ${CapitalizeFirst(
                 params.city
               )} (Updated ${
                 new Date().getMonth() +
@@ -105,13 +105,13 @@ export default async function Home({ params }) {
             <div>
               <Link
                 className="link-black badge py-2 bg-white shadow-sm text-dark fs-small fw-m"
-                href={`/pre-construction-homes/${params.city}/`}
+                href={`/off-plan-properties/${params.city}/`}
               >
                 All Projects in {CapitalizeFirst(params.city)}
               </Link>
               <Link
                 className="link-black badge py-2 bg-white shadow-sm text-dark fs-small fw-m"
-                href={`/pre-construction-homes/${params.city}/upcoming/`}
+                href={`/off-plan-properties/${params.city}/upcoming/`}
               >
                 Upcoming Projects in {CapitalizeFirst(params.city)}
               </Link>
@@ -119,15 +119,15 @@ export default async function Home({ params }) {
             <div>
               <Link
                 className="link-black badge py-2 bg-white shadow-sm text-dark fs-small fw-m"
-                href={`/pre-construction-homes/${params.city}/townhomes/`}
+                href={`/off-plan-properties/${params.city}/townhomes/`}
               >
                 New Townhomes {CapitalizeFirst(params.city)}
               </Link>
               <Link
                 className="link-black badge py-2 bg-white shadow-sm text-dark fs-small fw-m"
-                href={`/pre-construction-homes/${params.city}/detached/`}
+                href={`/off-plan-properties/${params.city}/villas/`}
               >
-                New Detached Homes {CapitalizeFirst(params.city)}
+                New Villas {CapitalizeFirst(params.city)}
               </Link>
             </div>
           </div>
@@ -154,11 +154,11 @@ export default async function Home({ params }) {
 
           <div className="pt-5 mt-5"></div>
           <div className="pt-5 mt-5"></div>
-          <DolphyAdvantage></DolphyAdvantage>
+         
           <div className="pt-5 mt-5"></div>
           <div className="mb-5">
             <h3 className="fs-2">
-              <strong>The Dolphy Insights</strong> - Know Whats Happening in{" "}
+              <strong>The Homeababa Insights</strong> - Know Whats Happening in{" "}
               {CapitalizeFirst(data.city.name)}
             </h3>
             <p>
@@ -195,7 +195,7 @@ export default async function Home({ params }) {
                 />
               </div>
               <h2 className="fw-mine text-center px-md-4 fs-4">
-                Contact Dolphy Team Today
+                Contact Homebaba Team Today
               </h2>
               <div className="row row-cols-1 row-cols-md-3 mt-3">
                 <div className="col-md-3"></div>

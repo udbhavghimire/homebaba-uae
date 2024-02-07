@@ -119,15 +119,15 @@ export default async function Home({ params }) {
             <div>
               <Link
                 className="link-black badge py-2 bg-white shadow-sm text-dark fs-small fw-m"
-                href={`/off-plan-properties/${params.city}/detached/`}
+                href={`/off-plan-properties/${params.city}/villas/`}
               >
-                New Detached Homes {CapitalizeFirst(params.city)}
+                New Villas {CapitalizeFirst(params.city)}
               </Link>
               <Link
                 className="link-black badge py-2 bg-white shadow-sm text-dark fs-small fw-m"
-                href={`/off-plan-properties/${params.city}/condos/`}
+                href={`/off-plan-properties/${params.city}/apartments/`}
               >
-                New Apartment  {CapitalizeFirst(params.city)}
+                New Apartments  {CapitalizeFirst(params.city)}
               </Link>
             </div>
           </div>

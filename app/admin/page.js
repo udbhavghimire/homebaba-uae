@@ -96,7 +96,7 @@ export default function Home() {
                 aira-label="Floating label select example"
               >
                 <option value="All">All</option>
-                <option value="Toronto">Toronto</option>
+                <option value="Toronto">Dubai</option>
               </select>
               <label htmlFor="floatingCity">Select City</label>
             </div>
@@ -111,10 +111,10 @@ export default function Home() {
                 aira-label="Floating label select example"
               >
                 <option value="All">All</option>
-                <option value="Condo">Condo</option>
+                <option value="Condo">Apartments</option>
                 <option value="Townhome">Townhome</option>
-                <option value="Detached">Detached</option>
-                <option value="Semi-Detached">Semi-Detached</option>
+                <option value="Detached">Villas</option>
+               
               </select>
               <label htmlFor="typee">Select Project Type</label>
             </div>
@@ -138,7 +138,7 @@ export default function Home() {
           </div>
           <div className="col-md-3 d-flex justify-content-end">
             <Link href="/admin/upload/" className="btn btn-success py-3">
-              Add New Preconstruction
+              Add New Off Plan Project
             </Link>
           </div>
         </div>

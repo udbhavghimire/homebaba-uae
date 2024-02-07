@@ -19,7 +19,7 @@ const Navbar = ({ cities, dropdown_cities }) => {
     <nav className="navbar navbar-expand-sm navbar-light bg-white py-3 py-md-2 shadow-navbar mb-3 sticky-top">
       <div className="container-fluid justify-content-start">
         <Link href="/" className="logo">
-          <span className="fs-2 fw-bold" >Homebaba.ae</span>
+          <span className=" fw-bold" >Homebaba.ae</span>
         </Link>
         <div className="input-group input-group-search me-2 me-md-0">
           {/* <SearchBar changeCity={setCityname} cities={cities} /> */}
