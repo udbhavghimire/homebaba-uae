@@ -460,9 +460,10 @@ export default function Update({ params }) {
                       onChange={(e) => handleChange(e)}
                       aira-label="Floating label select example"
                     >
-                      <option value="Condo">Condo</option>
+                     
+                      <option value="Apartment">Apartment</option>
                       <option value="Townhome">Townhome</option>
-                      <option value="Detached">Detached</option>
+                      <option value="Vila">Villa</option>
                       <option value="Semi-Detached">Semi-Detached</option>
                     </select>
                     <label htmlFor="floatingSelect2">
