@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SearchBar from "./SearchBar";
 
 //LIB
@@ -8,15 +8,32 @@ import SearchSuggest from "./SerachSuggest";
 
 const Navbar = ({ cities, dropdown_cities }) => {
   const [cityname, setCityname] = useState("");
+  const [navbar, setNavbar] = useState(false);
+
+  const changebackground = () => {
+    if(window.scrollY >= 90){
+      setNavbar(true);
+    }else{
+      setNavbar(false);
+    }
+  };
+
+  useEffect(() =>{
+    if(window){
+      window.addEventListener('scroll', changebackground);
+    }
+  },[])
 
   const filteredprojects = (value) => {
     return dropdown_cities.filter((city) => {
       return value.includes(city.name);
     });
   };
+  
 
   return (
-    <nav className="navbar navbar-expand-sm navbar-light bg-white py-3 py-md-2 shadow-navbar mb-3 sticky-top">
+    <div className={navbar ? 'navbar-transparent active': 'navbar-transparent'}>
+     <nav className="navbar navbar-expand-sm py-3 py-md-2  mb-3 sticky-top">
       <div className="container-fluid justify-content-start">
         <Link href="/" className="logo">
           <span className=" fw-bold" >Homebaba.ae</span>
@@ -193,6 +210,7 @@ const Navbar = ({ cities, dropdown_cities }) => {
         </div>
       </div>
     </nav>
+   </div>
   );
 };
 

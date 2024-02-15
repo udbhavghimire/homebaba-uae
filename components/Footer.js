@@ -116,7 +116,7 @@ const Footer = ({ cities }) => {
               <h4>Contact Us</h4>
               <p>4 Robert speck parkway,</p>
               <p>Mississauga, ONTARIO</p>
-              <p>Canada</p>
+           
               <p className="mt-2">
                 <strong>Phone:</strong> <span>647 527 4970</span>
               </p>

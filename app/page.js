@@ -197,12 +197,12 @@ export default async function Home(props) {
                     from Credible Builders
                   </p>
                 </div>
-                <div className="row row-cols-3 row-cols-lg-4">
+                <div className="row row-cols-3 row-cols-lg-4 d-flex justify-content-center align-items-center">
                   <div className="col  ">
                     <img
                       src="/builders/OP_logo-01.webp"
                       alt="EMAAR"
-                      className="img-fluid rounded-mine "
+                      className=" clientshei img-fluid  rounded-mine "
                     />
                   </div>
                   <div className="col  ">
@@ -210,7 +210,7 @@ export default async function Home(props) {
                     <img
                       src="/builders/43.png"
                       alt="Al Habtoor City"
-                      className="img-fluid rounded-mine "
+                      className=" clientshei img-fluid rounded-mine "
                     />
                   </div>
                   <div className="col  ">
@@ -218,7 +218,7 @@ export default async function Home(props) {
                     <img
                       src="/builders/OP_logo-03.webp"
                       alt="Damac"
-                      className="img-fluid rounded-mine "
+                      className=" clientshei img-fluid rounded-mine "
                     />
                   </div>
                   <div className="col  ">
@@ -226,14 +226,14 @@ export default async function Home(props) {
                     <img
                       src="/builders/OP_logo-08.webp"
                       alt="Dubai Properties"
-                      className="img-fluid rounded-mine "
+                      className=" clientshei img-fluid rounded-mine "
                     />
                   </div>
                   <div className="col  ">
                     <img
                       src="/builders/OP_logo-04.webp"
                       alt="Nshama"
-                      className="img-fluid rounded-mine "
+                      className=" clientshei img-fluid rounded-mine "
                     />
                   </div>
                   <div className="col  ">
@@ -241,7 +241,7 @@ export default async function Home(props) {
                     <img
                       src="/builders/OP_logo-09.png"
                       alt="Azizi"
-                      className="img-fluid rounded-mine "
+                      className=" clientshei img-fluid rounded-mine "
                     />
                   </div>
                   <div className="col  ">
@@ -249,7 +249,7 @@ export default async function Home(props) {
                     <img
                       src="/builders/OP_logo-16.webp"
                       alt="Meraas"
-                      className="img-fluid rounded-mine "
+                      className=" clientshei img-fluid rounded-mine "
                     />
                   </div>
                   
@@ -258,7 +258,7 @@ export default async function Home(props) {
                     <img
                       src="/builders/17.webp"
                       alt="Dubai South"
-                      className="img-fluid rounded-mine "
+                      className=" clientshei img-fluid rounded-mine "
                     />
                   </div>
                  
