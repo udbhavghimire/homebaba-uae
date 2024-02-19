@@ -103,60 +103,22 @@ const Navbar = ({ cities, dropdown_cities }) => {
                 className="dropdown-menu dropdown-menu-end border-0 show"
                 data-bs-popper="static"
               >
-                <div className="row p-3 pt-2 dopp">
-                  {dropdown_cities &&
-                    filteredprojects([
-                      "Toronto",
-                      "Calgary",
-                      "Mississauga",
-                      "Brampton",
-                      "Ajax",
-                      "Burlington",
-                      "Kitchener",
-                      "Hamilton",
-                      "Oakville",
-                      "Milton",
-                      "Niagara",
-                      "Vaughan",
-                    ]).map((city, no) => (
-                      <div className="col-12 col-sm-6 col-md-3 mb-4" key={no}>
-                        <Link
-                          className="link-black"
-                          href={`/off-plan-properties/${city.slug}/`}
-                        >
-                          <h5 className="mb-1 fw-mine fs-smaller fs-4">
-                            {city.name}
-                          </h5>
-                        </Link>
-                        <ul className="list-unstyled ll">
-                          {city.preconstructions &&
-                            city.preconstructions.length > 0 &&
-                            city.preconstructions
-                              .slice(0, 5)
-                              .map((project, no) => (
-                                <li key={no}>
-                                  <Link
-                                    className="dropdown-item link-black text-limit"
-                                    href={`/off-plan-properties/${city.slug}/${project.slug}`}
-                                  >
-                                    {project.project_name}
-                                  </Link>
-                                </li>
-                              ))}
-                        </ul>
-                      </div>
-                    ))}
-                  <hr />
-                  <div className="col-12">
-                    <Link
-                      className="btn btn-white link-black fw-bold p-0"
-                      href={"/off-plan-properties/"}
-                    >
-                      List of all cities and Off Plan homes in UAE
-                      <i className="bi bi-arrow-right ms-2"></i>
-                    </Link>
+                <div className="container">
+                    <div className="row row-cols-md-2 row-cols-2">
+                      {cities &&
+                        cities.map((city) => (
+                          <div className="col" key={city.id}>
+                            <Link
+                              className="dropdown-item"
+                              href={`/off-plan-properties/${city.slug}`}
+                            >
+                              {city.name}
+                            </Link>
+                          </div>
+                        ))}
+                    </div>
                   </div>
-                </div>
+                
               </div>
             </li>
             {/* <li className="nav-item">

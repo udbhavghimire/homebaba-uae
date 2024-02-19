@@ -161,10 +161,9 @@ a:hover {
 }
 
 .dropdown-menu .dropdown-item {
-  font-size: 11px !important;
-  line-height: 10px !important;
-  padding: 0px 0px !important;
-  transition: 0.3s;
+  font-size: 15px !important;
+  line-height: 40px !important;
+  padding: 0px 20px !important;
   color: black !important;
 }
 .ll {
@@ -1551,8 +1550,8 @@ label {
 
 .dropdown-fullwidth .dropdown-menu {
   margin: 0 auto;
-  left: 0;
-  right: 0;
+  left: 10px;
+  right: 10px;
   padding: 1rem 0;
   z-index: 99999999 !important;
 }
@@ -1597,10 +1596,11 @@ label {
   visibility: visible;
 } */
 .dropdown-menu[data-bs-popper] {
-  top: 75% !important;
+  top: 80% !important;
 }
 .dropdown-menu-end[data-bs-popper] {
-  right: 15px !important;
+
+  right: 100px !important;
   left: auto;
 }
 .project-address-card {
@@ -2093,7 +2093,7 @@ button:focus:not(:focus-visible) {
     position: static !important;
   }
   .dropdown-fullwidth .dropdown-menu {
-    max-width: 1100px !important;
+    max-width: 400px !important;
   }
 }
 .horizontal-row {

@@ -17,7 +17,7 @@ export default async function RootLayout({ children }) {
   let cities = await getCities();
   return (
     <>
-      <Navbar cities={cities}></Navbar>
+      {/* <Navbar cities={cities}></Navbar> */}
       {children}
       <Footer cities={cities}></Footer>
     </>

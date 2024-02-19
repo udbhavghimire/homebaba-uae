@@ -1,14 +1,27 @@
 import CondoCard from "@/components/CondoCard";
 import Link from "next/link";
+import PreconSchema from "@/components/PreconSchema";
 import BottomContactForm from "@/components/BottomContactForm";
 
-async function getData() {
+async function getData(city) {
   const res = await fetch(
-    "https://api.homebaba.ae/api/preconstructions?page_size=16",
+    "https://api.homebaba.ae/api/preconstructions-city/" + city + "?page_size=10",
     {
       next: { revalidate: 10 },
     }
   );
+
+  if (!res.ok) {
+    notFound();
+  }
+
+  return res.json();
+}
+
+async function getCities() {
+  const res = await fetch("https://api.homebaba.ae/api/all-city", {
+    next: { revalidate: 10 },
+  });
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -16,8 +29,26 @@ async function getData() {
   return res.json();
 }
 
+async function getCitiesandProjects() {
+  const res = await fetch("https://api.homebaba.ae/api/all-precons", {
+    next: { revalidate: 10 },
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  return res.json();
+}
 export default async function Home(props) {
-  const data = await getData();
+  const data = await getData("dubai");
+  let cities = await getCities();
+  
+  const filteredprojects = (value) => {
+    return dropdown_cities.filter((city) => {
+      return value.includes(city.name);
+    });
+  };
+
   return (
     <>
      <div>
@@ -168,13 +199,22 @@ export default async function Home(props) {
           </div>
           
         </div>
-        {/* <div className="row row-cols-1 row-cols-md-4 gy-4">
-            {data.results.map((item) => (
-              <div className="col" key={item.id}>
-                <CondoCard {...item} />
-              </div>
-            ))}
-          </div> */}
+       
+            <div className="row row-cols-1 row-cols-md-4 row-cols-lg-4 gy-4 gx-3 gx-lg-3">
+            {data.preconstructions &&
+              data.preconstructions.slice(0, 8).map((item) => (
+                <div className="col" key={item.id}>
+                  <script
+                    key={item.slug}
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                      __html: JSON.stringify(PreconSchema(item)),
+                    }}
+                  />
+                  <CondoCard {...item} />
+                </div>
+              ))}
+          </div>
      </section>
 
         {/* cities */}
