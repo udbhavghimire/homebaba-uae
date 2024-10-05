@@ -10,11 +10,12 @@
   },
   "dependencies": {
     "@tinymce/tinymce-react": "^4.3.2",
-    "axios": "^1.5.0",
+    "axios": "^1.7.2",
     "bootstrap": "^5.3.1",
     "date-fns": "^3.3.1",
     "dayjs": "^1.11.10",
     "disqus-react": "^1.1.5",
+    "dotenv": "^16.4.5",
     "electron": "^28.0.0",
     "lightgallery": "^2.7.2",
     "mapbox-gl": "^1.13.3",
@@ -32,6 +33,7 @@
     "react-quill": "^2.0.0",
     "react-search-autocomplete": "^8.5.2",
     "react-tooltip": "^5.22.0",
+    "resend": "^3.2.0",
     "simple-datatables": "^8.0.0",
     "sweetalert": "^2.1.2"
   }

@@ -1,6 +1,6 @@
 import axios from "axios";
 import swal from "sweetalert";
-
+re_BZhZm33i_7w1455cvyrk1hjAiUCtpKZi7;
 async function ContactFormSubmit(msgdata, setSubmitbtn, setCredentials) {
   let baseUrl = "https://api.homebaba.ae";
   setSubmitbtn("Submitting...");
@@ -13,30 +13,35 @@ async function ContactFormSubmit(msgdata, setSubmitbtn, setCredentials) {
   form_data.append("proj_name", msgdata.proj_name);
   form_data.append("cityy", msgdata.city);
   let url = `${baseUrl}/api/contact-form-submission/`;
-  try {
-    await axios.post(url, form_data, {
+  axios
+    .post(url, form_data, {
       headers: {
         "content-type": "multipart/form-data",
       },
       mode: "no-cors",
-    });
-    setSubmitbtn("Sucessfully Submitted");
-    setTimeout(() => {
+    })
+    .then(() => {
+      setSubmitbtn("Sucessfully Submitted");
+      setTimeout(() => {
+        setSubmitbtn("Contact Now");
+      }, 2000);
+      swal(
+        `Thank You, ${msgdata.name}`,
+        "Please expect an email or call from us shortly",
+        "success"
+      );
+      setCredentials({
+        ...msgdata,
+        name: "",
+        phone: "",
+        email: "",
+        message: "",
+      });
+    })
+    .catch((errr) => {
+      console.log(errr);
       setSubmitbtn("Contact Now");
-    }, 1000);
-    setCredentials({
-      ...msgdata,
-      name: "",
-      phone: "",
-      email: "",
-      message: "",
+      swal("Message Failed", "Cannot send your message", "error");
     });
-  } catch (errr) {
-    console.log(errr);
-    setSubmitbtn("Contact Now");
-    swal("Message Failed", "Cannot send your message", "error");
-    throw new Error(errr);
-  }
 }
-
 export default ContactFormSubmit;
