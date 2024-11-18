@@ -12,72 +12,62 @@ const Footer = ({ cities }) => {
     <footer className="footer mt-5 shadow-lg">
       <div className="container footer-top ">
         <div className=" newsletetrbg">
-         <div className="d-md-block d-none">
-         <img src="/arrow1.png" className="img-fluid arrow" alt="" />
-         <img src="/newsletter-img.png" className="img-fluid nesletter-img" alt="" />
-         </div>
-         
-        <div className="text-center pt-5 ">
-          <p className="fs-2 fw-bold">Get Exclusive Preconstruction Updates.</p>
-          <p className="textt">
-            Be the First to Know! Subscribe to Our Newsletter and Receive Timely
-            Updates on Exclusive Preconstruction Sales – Your Gateway to Prime
-            Real Estate Opportunities. Stay Informed, Stay Ahead!
-          </p>
+          <div className="d-md-block d-none">
+            <img src="/arrow1.png" className="img-fluid arrow" alt="" />
+            <img
+              src="/newsletter-img.png"
+              className="img-fluid nesletter-img"
+              alt=""
+            />
+          </div>
 
-          <form action="">
-            <div className="d-flex textt py-5 ">
-              <input
-                type="text"
-                name="email"
-                className="fields mx-2"
-                placeholder="email"
-              />
-              <a
-                href=""
-                className="btn btn-dark d-flex fw-bold align-items-center"
-              >
-                Sign Up{" "}
-              </a>
-            </div>
-          </form>
+          <div className="text-center pt-5 ">
+            <p className="fs-2 fw-bold">
+              Get Exclusive Preconstruction Updates.
+            </p>
+            <p className="textt">
+              Be the First to Know! Subscribe to Our Newsletter and Receive
+              Timely Updates on Exclusive Preconstruction Sales – Your Gateway
+              to Prime Real Estate Opportunities. Stay Informed, Stay Ahead!
+            </p>
+
+            <form action="">
+              <div className="d-flex textt py-5 ">
+                <input
+                  type="text"
+                  name="email"
+                  className="fields mx-2"
+                  placeholder="email"
+                />
+                <a
+                  href=""
+                  className="btn btn-dark d-flex fw-bold align-items-center"
+                >
+                  Sign Up{" "}
+                </a>
+              </div>
+            </form>
+          </div>
         </div>
-        </div>
-        <div className="  pt-5 mt-md-5 pt-md-5 ">
-          <div className=" footer-links ">
-            <h3 className="text-center fw-bold py-4 ">
-              {" "}
-              Off Plan Properties in UAE
-            </h3>
-            <div className="footer-listcontainer text-center">
-              <ul className="two-column-list text-center">
-                <div className="text-center justify-content-center">
-                  {/* {cities &&
-                  cities.map((city) => (
-                    <li key={city.id}>
-                      <Link href={`/${city.slug}`}>
-                        <span>New construction in {city.name}</span>
-                      </Link>
-                    </li>
-                  ))} */}
-                  <div className="row row-cols-md-3">
-                    <div className="col">
-                      <p>Off Plan Properties in Dubai</p>
-                      <p>Off Plan Properties in Abu Dhabi</p>
-                      <p>Off Plan Properties in Sharjah</p>
-                    </div>
-                    <div className="col">
-                      <p>Off Plan Properties in Ajman</p>
-                      <p>Off Plan Properties in Ras Al Khaimah</p>
-                      <p>Off Plan Properties in Umm Al Quwain</p>
-                    </div>
-                    <div className="col">
-                      <p>Off Plan Properties in Al Ain</p>
-                      <p>Off Plan Properties in Fujairah</p>
-                    </div>
-                  </div>
-                </div>
-              </ul>
+        <div className="container">
+          <div className=" container pt-5 mt-md-5 mt-0">
+            <div className="container footer-links">
+              <h3 className="text-center fw-bold pb-2 fs-2 font-family2">
+                {" "}
+                Off Plan Properties in UAE
+              </h3>
+              <div className=" text-center footer-listcontainer pt-2 mx-md-5 mx-2">
+                <ul className="row row-cols-md-3 row-cols-1 list-unstyled d-flex align-items-center center-sm">
+                  {cities &&
+                    cities.map((city) => (
+                      <li key={city.id} className="col mb-4">
+                        <Link href={`off-plan-properties/${city.slug}`}>
+                          <span>Off Plan Properties in {city.name}</span>
+                        </Link>
+                      </li>
+                    ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -86,15 +76,18 @@ const Footer = ({ cities }) => {
         <div className="text-center d-flex justify-content-around align-items-center ">
           <div className="row justify-content-center d-flex justify-content-around align-items-center pt-5">
             <div className="col-lg-6 texttt">
-              <a href="/" className="flogo fs-2 fw-bold text-dark text-decoration-none">
+              <a
+                href="/"
+                className="flogo fs-2 fw-bold text-dark text-decoration-none"
+              >
                 <span>Homebaba.ae</span>
               </a>
               <p></p>
               <p className="">
-                Homebaba.ae, your premier destination for off plan properties
-                 in UAE. Discover your dream home before it's even built.
-                Explore our curated listings and find the perfect
-                off-plan properties for your future.
+                Homebaba.ae, your premier destination for off plan properties in
+                UAE. Discover your dream home before it's even built. Explore
+                our curated listings and find the perfect off-plan properties
+                for your future.
               </p>
               <div className="social-links d-flex justify-content-center mt-4 texttt ">
                 <a href="#" className="me-2">
@@ -116,7 +109,7 @@ const Footer = ({ cities }) => {
               <h4>Contact Us</h4>
               <p>4 Robert speck parkway,</p>
               <p>Mississauga, ONTARIO</p>
-           
+
               <p className="mt-2">
                 <strong>Phone:</strong> <span>647 527 4970</span>
               </p>
