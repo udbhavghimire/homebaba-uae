@@ -59,11 +59,14 @@ export async function generateMetadata({ params }, parent) {
     alternates: {
       canonical: `https://Homebaba.ca/off-plan-properties/${params.city}/`,
     },
-    title: data.preconstructions.length + " PreOff Plan Homes in " + city,
+    title:
+      "Off Plan Homes in " +
+      city +
+      " | Townhouses, Villas & Apartments | Homebaba ",
     openGraph: {
       images: retImage(data.preconstructions),
     },
-    description: `${city} Off Plan  TownHomes, Detached & Condos. Check out ${data.preconstructions.length}+ new Off Plan homes on Homebaba. Floor plans & pricing updated for new Off Plan homes in ${city}`,
+    description: `Premium off-plan properties in ${city}. Choose from modern apartments, villas, and townhomes in prime locations. Perfect for living or investment!`,
   };
 }
 
@@ -111,9 +114,9 @@ export default async function Home({ params }) {
               </Link>
               <Link
                 className="link-black badge py-2 bg-white shadow-sm text-dark fs-small fw-m"
-                href={`/off-plan-properties/${params.city}/townhomes/`}
+                href={`/off-plan-properties/${params.city}/homes/`}
               >
-                New Townhomes {CapitalizeFirst(params.city)}
+                Off Plan Homes {CapitalizeFirst(params.city)}
               </Link>
             </div>
             <div>
@@ -121,13 +124,13 @@ export default async function Home({ params }) {
                 className="link-black badge py-2 bg-white shadow-sm text-dark fs-small fw-m"
                 href={`/off-plan-properties/${params.city}/villas/`}
               >
-                New Villas {CapitalizeFirst(params.city)}
+                Off Plan Villas {CapitalizeFirst(params.city)}
               </Link>
               <Link
                 className="link-black badge py-2 bg-white shadow-sm text-dark fs-small fw-m"
                 href={`/off-plan-properties/${params.city}/apartments/`}
               >
-                New Apartments  {CapitalizeFirst(params.city)}
+                Off Plan Apartments {CapitalizeFirst(params.city)}
               </Link>
             </div>
           </div>

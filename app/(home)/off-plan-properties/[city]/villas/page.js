@@ -60,13 +60,13 @@ export async function generateMetadata({ params }, parent) {
       canonical: `https://dolphy.ca/pre-construction-homes/${params.city}/detached/`,
     },
     title:
-      data.preconstructions.length +
-      " Preconstruction Detached Homes in " +
-      city,
+      "Villas for Sale in " +
+      city +
+      " | Off-Plan Properties & New Villas | Homebaba.ae",
     openGraph: {
       images: retImage(data.preconstructions),
     },
-    description: `${city} upcoming pre construction Detached Homes. Check out ${data.preconstructions.length}+ new construction detached homes on Dolphy. Floor plans & pricing updated for upcoming new construction detached homes in ${city}`,
+    description: `Discover off-plan properties in ${city}. Choose from modern apartments, villas, and townhomes in prime locations. Perfect for living or investment!`,
   };
 }
 
